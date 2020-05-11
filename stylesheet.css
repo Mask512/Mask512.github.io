@@ -1,5 +1,3 @@
-/* Mulai code Anda dari baris terakhir */
-
 * {
   box-sizing: border-box;
 }
@@ -203,7 +201,7 @@ footer {
   padding-bottom: 20px;
 }
 
-.menu-icon {
+header .menu-icon {
   color: white;
   float: right;
   font-size: 25px;
