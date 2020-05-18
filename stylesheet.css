@@ -117,13 +117,12 @@ header {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-/* Tambahkan CSS untuk menu-icon */
-.menu-icon {
+
+header span {
   color: white;
   float: right;
   font-size: 25px;
   padding: 21px 0;
-  /* Gantikan property display ke none */
   display: none;
 }
 
@@ -156,7 +155,7 @@ header {
 
 .lesson-icon p {
   position: absolute;
-  top: 44%;
+  top: 50%;
   width: 100%;
   color: white;
 }
