@@ -123,7 +123,7 @@ header span {
   float: right;
   font-size: 25px;
   padding: 21px 0;
-  display: none;
+  display: none !important;
 }
 
 .lesson-wrapper {
