@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+
 @media (max-width:700px) {
     
     .checkbtn {
@@ -26,12 +27,12 @@
         left: 0
 
     }
-    
-    
+       
 
     .top-wrapper .heading {
         padding-top: 90px;
         text-align: center;
+        margin: 0 auto;
     }
     
     h1 {
@@ -60,8 +61,13 @@
 
     .top-wrapper p {
         padding-bottom: 25px;
-    }    
+    }
+
+    
 }
+
+/* resolusi hp saya di google chrome*/
+
 
 @media (max-width:393px) {
 
@@ -77,6 +83,9 @@
     }
     .top-wrapper .heading {
        font-size: 12px;
+    }
+    #top-btn {
+        bottom: 30px;
     }
 
 }
