@@ -60,7 +60,23 @@
 
     .top-wrapper p {
         padding-bottom: 25px;
+    }    
+}
+
+@media (max-width:393px) {
+
+    header {
+        font-size: 13px;
+    }
+    .logo {
+        width: 100px;
+    }
+    i {
+        font-size: 25px;
+        padding: 30px;
+    }
+    .top-wrapper .heading {
+       font-size: 12px;
     }
 
-    
 }
