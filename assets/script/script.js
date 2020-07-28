@@ -1,3 +1,7 @@
+let nama = prompt(`Masukan namamu :`);
+alert(`Selamat datang kak ${nama}. Silahkan membaca :D`)
+
+
 const profile = document.getElementById(`about-me`);
 const myProfile = document.getElementsByTagName(`aside`)[0];
 
