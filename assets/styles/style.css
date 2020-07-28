@@ -1,0 +1,279 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Quicksand",sans-serif;
+  }
+
+  /* warna dicoding  rgba(45,62,80,1) #2D3E50*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background-color: whitesmoke;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 65px;
+}
+
+.logo {
+    cursor: pointer;
+    width: 120px;
+}
+
+.checkbtn {
+    font-size: 25px;
+    float: right;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.nav-links a,
+.about-me {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #2D3E50;
+  text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    padding: 0px 20px;
+}
+
+.nav-links li a {
+    transition: color 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+    color: #0088a9;
+}
+
+.about-me {
+    padding: 9px 25px;
+    background-color: white;
+    border: none;
+    border-radius: 90px;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+}
+
+.about-me:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.top-wrapper {
+    color: white;
+    background-image: url(../img/dicoding-background.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+}
+
+.top-wrapper .heading {
+    padding: 150px 20px 0 20px;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+.top-wrapper .heading p{
+    padding-top: 20px;
+}
+
+.section-title {
+    text-align: center;
+    padding: 30px 0;
+    color: #3d3d3d;
+
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;    
+      
+ }
+ .card:hover {
+    transform: scale(1.1);
+ }
+
+ #html:hover {
+    box-shadow: 0 4px 8px 0 rgba(228,83,38,1);    
+ }
+
+ #css:hover {
+    box-shadow: 0 4px 8px 0 rgba(12,114,184,1);
+ }
+#js:hover {
+    box-shadow: 0 4px 8px 0 rgba(231,163,40,1);
+}
+ 
+ 
+.lesson {
+     text-align: center;
+     display: flex;
+     gap: 20px;
+     
+}
+
+.lessons-wrapper {
+    padding-bottom: 30px;
+}
+
+.lessons-wrapper li {
+    list-style: none;
+    flex-basis: 100%;      
+ }
+
+.lesson img {
+     height: 250px;
+ }
+
+.lesson h3 {
+    padding-bottom: 10px;
+}
+
+.messages-wrapper {
+    text-align: center;
+    height: 150px;
+    background-color: #2D3E50;
+    color: white;
+}
+
+.heading h3{
+    font-weight: normal;
+    padding: 20px 0;
+}
+
+.btn-message {
+    background-color: black;
+    display: inline-block;
+    padding: 10px 10px;
+    border: solid 1px black;
+    border-radius: 5px;
+    font-size: 15px;
+    box-shadow: 0 5px grey;
+    cursor: pointer;
+}
+
+.messages-wrapper span {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-message:active {
+    position: relative;
+    top: 5px;
+    box-shadow: none;
+}
+
+footer {
+    text-align: center;
+    font-size: 10px;
+    padding: 5px 0;
+}
+
+
+.profile {
+    width: 300px;
+    height: 430px;
+    background: white;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 1px 10px 1px black;
+}
+
+.upper {
+    height: 150px;
+    background: #2D3E50;
+}
+
+.profile-image {
+    background: white;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;    
+    transform: translate(100px,100px);
+}
+
+
+.profile-image img {   
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    padding: 3px;
+}
+
+.lower {
+    height: 280px;
+    background: whitesmoke;    
+    text-align: center;
+    padding: 20px;
+    padding-top: 40px;
+}
+
+.lower h3, h4 {    
+    line-height: 2.5;   
+}
+
+.lower h4 {
+    color: #7F00FF;
+    opacity: .6;
+    font-weight: bold;    
+    
+}
+
+.lower p {
+    font-size: 15px;
+    color: gray;
+    margin-bottom: 30px;
+}
+
+.btn-profile {
+    padding: 12px 20px;
+    background: #2D3E50;
+    border: none;
+    color: white;
+    border-radius: 30px;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all .3s ease-in;
+}
+
+.btn-profile:hover {
+    background: transparent;
+    color: #2D3E50;
+    border: 2px solid #2D3E50;
+}
+
+
+aside {
+    display: none;
+}
+
+
+
