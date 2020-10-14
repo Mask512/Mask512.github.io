@@ -1,5 +1,8 @@
 let nama = prompt(`Masukan namamu :`);
-alert(`Selamat datang kak ${nama}. Silahkan membaca :D`)
+
+if (nama === null) {
+alert('Oke deh kalo rahasia');} else {
+alert(`Selamat datang kak ${nama}. Silahkan membaca :D`)}
 
 
 const profile = document.getElementById(`about-me`);
