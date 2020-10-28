@@ -15,13 +15,15 @@ while (play && hp != "0" ) {
         play = false;
     } else if (ans < comp) {
         if (hp == 0) {
-            alert(`${kurang}\n${gagal}\nJawabannya adalah ${comp}`);    
+            //alert(`${kurang}\n${gagal}\nJawabannya adalah ${comp}`);  
+            alert(`noob anjeeng\nJawabannya adalah ${comp}`);
         } else {
             alert(`${kurang}\nKesempatan anda tersisa ${hp}`);
         }
     } else {
         if (hp == 0) {
-            alert(`${kurang}\n${gagal}\nJawabannya adalah ${comp}`);
+            //alert(`${kurang}\n${gagal}\nJawabannya adalah ${comp}`);
+            alert(`noob anjeeng\nJawabannya adalah ${comp}`);
         } else {            
         alert(`${lebih}\nKesempatan anda tersisa ${hp}`);
         }
