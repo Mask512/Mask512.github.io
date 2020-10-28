@@ -1,8 +1,8 @@
-let play = true;
 let hp = prompt("Masukan Jumlah kesempatan yang kamu mau: ");
 alert(`Tebak angka dari 1 - 10 \nKamu punya ${hp} kesempatan`);
 const comp = Math.ceil(Math.random() * 10);
-//alert(comp);
+
+let play = true;
 let ans;
 const kurang = "Tebakanmu terlalu kecil";
 const lebih = "Tebakanmu terlalu besar" ;
