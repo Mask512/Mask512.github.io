@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+    <script>
+        let cek = prompt('masukan sebuah kata');
+        const check = (args) => {  
+        let test = args.split('').reverse().toString().replaceAll(',',(''));
+        if (args == test) {
+        alert('palindrom');
+        } else {
+        alert('bukan palindrom');
+        }};
+        check(cek);
+
+        if(confirm('Test Lagi?')){
+        window.location.reload();}
+
+    </script>
+</body>
+</html>
