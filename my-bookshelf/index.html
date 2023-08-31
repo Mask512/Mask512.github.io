@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Selamat datang di My Bookshelf, tempat untuk mengatur koleksi buku Anda. Tambahkan, edit, dan kelola daftar buku Anda dengan mudah. Nikmati fitur pencarian dan filtering untuk menemukan buku dengan cepat."
+    />
+    <meta
+      name="keywords"
+      content="bookshelf, koleksi buku, tambahkan buku, edit buku, kelola buku, pencarian buku, filter buku"
+    />
+    <meta name="author" content="Dhimas Sahid Pangestu">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Bookshelf</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/icon/bookshelf.svg"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+  </head>
+  <body>
+    <header class="head_bar">
+      <h1 class="head_bar__title container">My <span>Bookshelf</span></h1>
+    </header>
+    <div class="container">
+      <nav id="nav_wrapper">
+        <section class="search_section">
+          <form id="searchBook">
+            <input
+              id="searchBookTitle"
+              type="text"
+              placeholder="Cari Judul Buku"
+            />
+            <button id="searchSubmit" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </section>
+        <section class="add_book">
+          <button id="addBookButton" type="button">
+            <i class="fa-solid fa-circle-plus"></i>
+            <span>Tambahkan Buku</span>
+          </button>
+        </section>
+      </nav>
+    </div>
+    <main>
+      <div id="modalAddBook" class="modal">
+        <div class="input_wrapper card">
+          <div class="book_design_wrapper">
+            <div class="book_design book_input" id="bookDesignForm">
+              <h3 class="book_design__title">Book Title Here</h3>
+              <p class="book_design__author">Dhimas Sahid P</p>
+              <p class="book_design__year">2023</p>
+            </div>
+          </div>
+          <section class="input_section">
+            <h2 class="input_section__title">Masukkan Buku Baru</h2>
+            <form id="inputBook" class="inputBook">
+              <div class="input">
+                <input
+                  id="inputBookTitle"
+                  type="text"
+                  name="title"
+                  placeholder="Judul Buku"
+                  required
+                />
+              </div>
+              <div class="input">
+                <input
+                  id="inputBookAuthor"
+                  type="text"
+                  name="author"
+                  placeholder="Penulis Buku"
+                  required
+                />
+              </div>
+              <div class="input">
+                <input
+                  id="inputBookYear"
+                  type="number"
+                  name="year"
+                  placeholder="Tahun Terbit"
+                  min="1500"
+                  max="2023"
+                  required
+                />
+              </div>
+              <div class="input-inline">
+                <div class="input">
+                  <label for="inputBookColor">Warna Buku</label>
+                  <input
+                    id="inputBookColor"
+                    name="inputBookColor"
+                    type="color"
+                    required
+                  />
+                </div>
+                <div class="input">
+                  <label for="inputBookIsComplete">Selesai dibaca</label>
+                  <input id="inputBookIsComplete" type="checkbox" />
+                </div>
+              </div>
+              <div class="input-btn">
+                <button id="cancelBookButton" type="button">Batal</button>
+                <button id="bookSubmitButton" type="submit">
+                  Masukkan Buku ke rak
+                </button>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+
+      <div class="bookshelf_wrapper container">
+        <section class="book_shelf">
+          <h2 class="book_shelf__title">Belum selesai dibaca</h2>
+          <div id="incompleteBookshelfList" class="book_list">
+            <div class="book_item_wrapper">
+              <article class="book_item book_design">
+                <h3 class="book_design__title">Book Title</h3>
+                <p class="book_design__author">John Doe</p>
+                <p class="book_design__year">2002</p>
+              </article>
+              <div class="book_action">
+                <button><i class="fa-solid fa-book"></i>Selesai</button>
+                <button><i class="fa-regular fa-pen-to-square"></i>Edit</button>
+                <button><i class="fa-solid fa-trash"></i>Hapus</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="book_shelf">
+          <h2 class="book_shelf__title">Selesai dibaca</h2>
+          <div id="completeBookshelfList" class="book_list">
+            <div class="book_item_wrapper">
+              <article class="book_item book_design">
+                <h3 class="book_design__title">Book Title</h3>
+                <p class="book_design__author">John Doe</p>
+                <p class="book_design__year">2002</p>
+                <div class="book_action">
+                  <button>
+                    <i class="fa-solid fa-book-open"></i>Belum selesai
+                  </button>
+                  <button>
+                    <i class="fa-regular fa-pen-to-square"></i>Edit
+                  </button>
+                  <button><i class="fa-solid fa-trash"></i>Hapus</button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div id="modalEditBook" class="modal">
+        <div class="input_wrapper card">
+          <div class="book_design_wrapper">
+            <div class="book_design book_input" id="editDesignForm">
+              <h3 class="book_design__title">Book Title Here</h3>
+              <p class="book_design__author">Dhimas Sahid P</p>
+              <p class="book_design__year">2023</p>
+            </div>
+          </div>
+
+          <section class="input_section">
+            <h2 class="input_section__title">Edit Buku</h2>
+            <form id="editBook" class="inputBook">
+              <div class="input">
+                <input
+                  id="editBookTitle"
+                  type="text"
+                  name="title"
+                  placeholder="Judul Buku"
+                  required
+                />
+              </div>
+              <div class="input">
+                <input
+                  id="editBookAuthor"
+                  type="text"
+                  name="author"
+                  placeholder="Penulis Buku"
+                  required
+                />
+              </div>
+              <div class="input">
+                <input
+                  id="editBookYear"
+                  type="number"
+                  name="year"
+                  placeholder="Tahun Terbit"
+                  min="1500"
+                  max="2023"
+                  required
+                />
+              </div>
+              <div class="input-inline">
+                <div class="input">
+                  <label for="inputBookColor">Warna Buku</label>
+                  <input
+                    id="editBookColor"
+                    name="inputBookColor"
+                    type="color"
+                    required
+                  />
+                </div>
+                <div class="input">
+                  <label for="inputBookIsComplete">Selesai dibaca</label>
+                  <input id="editBookIsComplete" type="checkbox" />
+                </div>
+              </div>
+              <div class="input-btn">
+                <button id="cancelEditButton" type="button">Batal</button>
+                <button type="submit">Update Buku</button>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./assets/scripts/main.js"></script>
+</html>
